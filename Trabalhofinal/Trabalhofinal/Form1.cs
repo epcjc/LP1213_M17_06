@@ -20,5 +20,34 @@ namespace Trabalhofinal
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            this.jogadorTableAdapter.Insert(this.textBox1.Text, this.textBox2.Text, this.dateTimePicker1.Value, 0, 0);
+        }
+
+        private void jogadorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'database1DataSet.Jogador' table. You can move, or remove it, as needed.
+           
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,6 +37,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.database1DataSet = new Trabalhofinal.Database1DataSet();
+            this.jogadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jogadorTableAdapter = new Trabalhofinal.Database1DataSetTableAdapters.JogadorTableAdapter();
+            this.objectoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.objectoTableAdapter = new Trabalhofinal.Database1DataSetTableAdapters.ObjectoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,22 +98,52 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Cancelar Aposta";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // comboBox1
             // 
+            this.comboBox1.DataSource = this.jogadorBindingSource;
+            this.comboBox1.DisplayMember = "nome_completo";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(126, 33);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(232, 21);
             this.comboBox1.TabIndex = 8;
+            this.comboBox1.ValueMember = "id_jogador";
             // 
             // comboBox2
             // 
+            this.comboBox2.DataSource = this.objectoBindingSource;
+            this.comboBox2.DisplayMember = "nome";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(126, 82);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(232, 21);
             this.comboBox2.TabIndex = 9;
+            this.comboBox2.ValueMember = "id_objecto";
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jogadorBindingSource
+            // 
+            this.jogadorBindingSource.DataMember = "Jogador";
+            this.jogadorBindingSource.DataSource = this.database1DataSet;
+            // 
+            // jogadorTableAdapter
+            // 
+            this.jogadorTableAdapter.ClearBeforeFill = true;
+            // 
+            // objectoBindingSource
+            // 
+            this.objectoBindingSource.DataMember = "Objecto";
+            this.objectoBindingSource.DataSource = this.database1DataSet;
+            // 
+            // objectoTableAdapter
+            // 
+            this.objectoTableAdapter.ClearBeforeFill = true;
             // 
             // Aposta
             // 
@@ -121,6 +160,10 @@
             this.Controls.Add(this.label1);
             this.Name = "Aposta";
             this.Text = "Aposta";
+            this.Load += new System.EventHandler(this.Aposta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.objectoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +179,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private Database1DataSet database1DataSet;
+        private System.Windows.Forms.BindingSource jogadorBindingSource;
+        private Database1DataSetTableAdapters.JogadorTableAdapter jogadorTableAdapter;
+        private System.Windows.Forms.BindingSource objectoBindingSource;
+        private Database1DataSetTableAdapters.ObjectoTableAdapter objectoTableAdapter;
     }
 }
