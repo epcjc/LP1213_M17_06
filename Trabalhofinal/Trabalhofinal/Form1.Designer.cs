@@ -43,9 +43,21 @@
             this.jogadorTableAdapter = new Trabalhofinal.Database1DataSetTableAdapters.JogadorTableAdapter();
             this.tableAdapterManager = new Trabalhofinal.Database1DataSetTableAdapters.TableAdapterManager();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.jogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.objectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estatísticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inserirJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inserirObjectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarObjectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarObjectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostarResultadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -83,6 +95,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(250, 20);
             this.textBox1.TabIndex = 14;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -150,6 +163,88 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(250, 20);
             this.dateTimePicker1.TabIndex = 22;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jogadorToolStripMenuItem,
+            this.objectoToolStripMenuItem,
+            this.estatísticaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(721, 24);
+            this.menuStrip1.TabIndex = 23;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // jogadorToolStripMenuItem
+            // 
+            this.jogadorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inserirJogadorToolStripMenuItem,
+            this.eliminarJogadorToolStripMenuItem,
+            this.editarJogadorToolStripMenuItem});
+            this.jogadorToolStripMenuItem.Name = "jogadorToolStripMenuItem";
+            this.jogadorToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.jogadorToolStripMenuItem.Text = "Jogador";
+            // 
+            // objectoToolStripMenuItem
+            // 
+            this.objectoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inserirObjectoToolStripMenuItem,
+            this.eliminarObjectoToolStripMenuItem,
+            this.editarObjectoToolStripMenuItem});
+            this.objectoToolStripMenuItem.Name = "objectoToolStripMenuItem";
+            this.objectoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.objectoToolStripMenuItem.Text = "Objecto";
+            // 
+            // estatísticaToolStripMenuItem
+            // 
+            this.estatísticaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostarResultadosToolStripMenuItem});
+            this.estatísticaToolStripMenuItem.Name = "estatísticaToolStripMenuItem";
+            this.estatísticaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.estatísticaToolStripMenuItem.Text = "Estatística";
+            // 
+            // inserirJogadorToolStripMenuItem
+            // 
+            this.inserirJogadorToolStripMenuItem.Name = "inserirJogadorToolStripMenuItem";
+            this.inserirJogadorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.inserirJogadorToolStripMenuItem.Text = "Inserir Jogador";
+            // 
+            // eliminarJogadorToolStripMenuItem
+            // 
+            this.eliminarJogadorToolStripMenuItem.Name = "eliminarJogadorToolStripMenuItem";
+            this.eliminarJogadorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.eliminarJogadorToolStripMenuItem.Text = "Eliminar Jogador";
+            // 
+            // editarJogadorToolStripMenuItem
+            // 
+            this.editarJogadorToolStripMenuItem.Name = "editarJogadorToolStripMenuItem";
+            this.editarJogadorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.editarJogadorToolStripMenuItem.Text = "Editar Jogador";
+            // 
+            // inserirObjectoToolStripMenuItem
+            // 
+            this.inserirObjectoToolStripMenuItem.Name = "inserirObjectoToolStripMenuItem";
+            this.inserirObjectoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.inserirObjectoToolStripMenuItem.Text = "Inserir Objecto";
+            // 
+            // eliminarObjectoToolStripMenuItem
+            // 
+            this.eliminarObjectoToolStripMenuItem.Name = "eliminarObjectoToolStripMenuItem";
+            this.eliminarObjectoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.eliminarObjectoToolStripMenuItem.Text = "Eliminar Objecto";
+            // 
+            // editarObjectoToolStripMenuItem
+            // 
+            this.editarObjectoToolStripMenuItem.Name = "editarObjectoToolStripMenuItem";
+            this.editarObjectoToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.editarObjectoToolStripMenuItem.Text = "Editar Objecto";
+            // 
+            // mostarResultadosToolStripMenuItem
+            // 
+            this.mostarResultadosToolStripMenuItem.Name = "mostarResultadosToolStripMenuItem";
+            this.mostarResultadosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.mostarResultadosToolStripMenuItem.Text = "Mostar Resultados";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,12 +259,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogadorBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,6 +289,17 @@
         private Database1DataSetTableAdapters.JogadorTableAdapter jogadorTableAdapter;
         private Database1DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem jogadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inserirJogadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarJogadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarJogadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem objectoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inserirObjectoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarObjectoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarObjectoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estatísticaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostarResultadosToolStripMenuItem;
 
     }
 }

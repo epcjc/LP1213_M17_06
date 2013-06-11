@@ -23,6 +23,7 @@ namespace Trabalhofinal
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Cancelado");
             Application.Exit();
         }
 
@@ -35,7 +36,11 @@ namespace Trabalhofinal
         {
            
             this.jogadorTableAdapter.Insert(this.textBox1.Text, this.textBox2.Text, this.dateTimePicker1.Value, 0, 0);
+
+            MessageBox.Show("Registo efectuado com exito");
+            Application.Exit();
         }
+
 
         private void jogadorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -47,6 +52,11 @@ namespace Trabalhofinal
         {
             // TODO: This line of code loads data into the 'database1DataSet.Jogador' table. You can move, or remove it, as needed.
            
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
